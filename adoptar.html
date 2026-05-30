@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopción - Patitas Empolvadas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a class="logo" href="index.html">
+            <img src="imagen/logo.png" alt="Logo Patitas Empolvadas" class="logo-img">Patitas Empolvadas
+        </a>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="galeria.html">Galería</a>
+            <a href="adopcion.html">Adoptar</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <section class="catalogo">
+        <h2>Animales disponibles</h2>
+        <div class="grid-catalogo">
+            <div class="card">
+                <img src="imagen/perro2.png" alt="Firulais">
+                <h3>Firulais</h3>
+                <p>Edad: 2 años</p>
+                <p>Tamaño: Mediano</p>
+                <p>Estado: Disponible</p>
+                <a class="button" href="#perfil">Ver perfil</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="perfil" class="perfil-animal">
+        <h2>Perfil de Firulais</h2>
+        <img src="imagen/perro2.png" alt="Firulais">
+        <p>Firulais fue rescatado de la calle, es juguetón y cariñoso. Se lleva bien con otros perros.</p>
+        <p>Edad: 2 años | Sexo: Macho | Tamaño: Mediano</p>
+        <a class="button" href="contacto.html">Solicitar adopción</a>
+    </section>
+    
+    <section class="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="text" placeholder="Apellidos" required>
+            <input type="text" placeholder="Ciudad" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="tel" placeholder="Teléfono">
+            <select required>
+                <option value="">Seleccione tipo de consulta</option>
+                <option>Adopción</option>
+                <option>Donación</option>
+                <option>Voluntariado</option>
+                <option>Información general</option>
+                <option>Otro</option>
+            </select>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit" class="button">Enviar</button>
+        </form>
+        <p>Correo: contacto@patitasempolvadas.org | Tel: +57 300 000 0000</p>
+        <div class="redes">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </section>
+    <footer>
+        <p>Patitas Empolvadas © 2026 | contacto@patitasempolvadas.org</p>
+        <p>Desarrollado por Juan</p>
+    </footer>
+</body>
+
+</html>
