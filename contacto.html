@@ -14,20 +14,42 @@
             <img src="imagen/logo.png" alt="Logo Patitas Empolvadas" class="logo-img">Patitas Empolvadas
         </a>
         <div class="nav-links">
-            <a href="index.html">Inicio</a>
-            <a href="galeria.html">Galería</a>
-            <a href="adopcion.html">Adoptar</a>
+            <a href="Index.html">Inicio</a>
+            <a href="conocenos.html">Conocenos</a>
+            <a href="adoptar.html">Adopta</a>
             <a href="contacto.html">Contacto</a>
         </div>
     </nav>
 
-    <section class="galeria">
-        <h2>Galería</h2>
-        <div class="grid-galeria">
-            <img src="imagen/rescate.png" alt="Rescate">
-            <img src="imagen/adopcion.png" alt="Evento">
-            <img src="imagen/evento.png" alt="Rescate">
-            <img src="imagen/entrega.png" alt="Evento">
+
+    <section class="contacto">
+        <h2>📩 Contáctanos</h2>
+        <p>Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="text" placeholder="Apellidos" required>
+            <input type="text" placeholder="Ciudad" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="tel" placeholder="Teléfono">
+            <select required>
+                <option value="">Seleccione tipo de consulta</option>
+                <option>Adopción</option>
+                <option>Donación</option>
+                <option>Voluntariado</option>
+                <option>Información general</option>
+                <option>Otro</option>
+            </select>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit" class="button">Enviar mensaje</button>
+        </form>
+        <p class="info-contacto">
+            📧 contacto@patitasempolvadas.org | 📞 +57 300 000 0000
+        </p>
+
+        <div class="redes">
+            <a href="#">🌐 Facebook</a>
+            <a href="#">📸 Instagram</a>
+            <a href="#">🐦 Twitter</a>
         </div>
     </section>
 
