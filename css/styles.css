@@ -234,18 +234,18 @@ figcaption {
     }
 }
 
-.destacados {
+.labor {
     text-align: center;
     padding: 50px 20px;
     background: #fef6e4;
 }
 
-.destacados h2 {
+.labor h2 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.destacados p {
+.labor p {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
@@ -255,33 +255,6 @@ figcaption {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-}
-
-.vision-mision {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 50px 20px;
-    background: #fef6e4;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.vision,
-.mision {
-    flex: 1;
-    min-width: 280px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.vision h3,
-.mision h3 {
-    color: #6b3f2a;
-    margin-bottom: 15px;
 }
 
 .galeria {
