@@ -130,8 +130,129 @@
                     <button>Ver perfil</button>
                 </div>
             </div>
+            <div class="card">
+                <img src="imagen/kira1.png" alt="Kira">
+                <div class="card-info">
+                    <h3>Kira</h3>
+                    <p>Edad: 4 años</p>
+                    <p>Tamaño/Raza: Grande - Doberman</p>
+                    <p class="status available">Estado: Disponible</p>
+                    <button>Ver perfil</button>
+                </div>
+            </div>
         </div>
     </section>
+
+    <section id="animal-profile" class="animal-profile hidden">
+        <div class="profile-container">
+            <img id="profile-img" src="" alt="Animal" class="profile-img">
+            <div class="profile-info">
+                <h2 id="profile-name"></h2>
+                <p><strong>Edad:</strong> <span id="profile-age"></span></p>
+                <p><strong>Sexo:</strong> <span id="profile-sex"></span></p>
+                <p><strong>Tamaño/Raza:</strong> <span id="profile-size"></span></p>
+                <h3>Descripción</h3>
+                <p id="profile-description"></p>
+                <button class="cta">Solicitar adopción</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const animalData = {
+            "Choco": {
+                img: "imagen/perro1.2.png",
+                age: "2 años",
+                sex: "Macho",
+                size: "Mediano - Mestizo",
+                description: "Choco fue rescatado de la calle en condiciones difíciles, pero rápidamente mostró su espíritu alegre. Actualmente está vacunado, desparasitado y en buen estado físico. Es juguetón, cariñoso y disfruta de paseos largos, se lleva bien con otros perros y niños."
+            },
+            "Misu": {
+                img: "imagen/misu.png",
+                age: "1 año",
+                sex: "Hembra",
+                size: "Pequeño - Gato criollo",
+                description: "Misu fue encontrada en una casa abandonada y rescatada por voluntarios. Está esterilizada, vacunada y no presenta problemas médicos. Es tranquila y muy sociable, le encanta dormir en lugares cálidos y jugar con pelotas, se adapta fácilmente a ambientes familiares."
+            },
+            "Rocky": {
+                img: "imagen/rocky.png",
+                age: "4 años",
+                sex: "Macho",
+                size: "Grande - Labrador",
+                description: "Rocky fue entregado por una familia que no podía cuidarlo. Está en excelente estado, con revisiones veterinarias al día. Noble y protector, ideal para familias con niño, disfruta de juegos al aire libre y es obediente."
+            },
+            "Luna": {
+                img: "imagen/luna.png",
+                age: "3 años",
+                sex: "Hembra",
+                size: "Mediano - Siamés",
+                description: "Luna fue rescatada de un vecindario donde vivía sola. Esterilizada, vacunada y con buena condición física. Curiosa y activa, le gusta explorar y trepar, se adapta fácilmente a nuevos ambientes y es cariñosa con sus cuidadores."
+            },
+            "Toby": {
+                img: "imagen/toby.png",
+                age: "3 meses",
+                sex: "Macho",
+                size: "Pequeño - Pug",
+                description: "Toby fue encontrado junto a su camada en un refugio improvisado. Como cachorro, requiere controles frecuentes, pero está sano y vacunado. Alegre y juguetón, necesita un hogar con paciencia y cariño, aprende rápido y busca compañía constante."
+            },
+            "Nina": {
+                img: "imagen/nina.png",
+                age: "2 años",
+                sex: "Hembra",
+                size: "Mediano - Persa",
+                description: "Nina fue rescatada de un criadero donde no recibía cuidados adecuados. Esterilizada, vacunada y con pelaje bien cuidado. Elegante y tranquila, perfecta para un hogar calmado, disfruta de la compañía y de ambientes silenciosos."
+            },
+            "Max": {
+                img: "imagen/maxi.png",
+                age: "6 meses",
+                sex: "Macho",
+                size: "Mediano - Pastor Alemán",
+                description: "Max fue entregado por una familia que no podía atender sus necesidades de ejercicio. Está vacunado y en excelente estado físico. Enérgico y necesita espacio para correr, excelente compañero de juegos y muy inteligente para el entrenamiento."
+            },
+            "Simba": {
+                img: "imagen/simba.png",
+                age: "1 año",
+                sex: "Macho",
+                size: "Mediano - Bengalí",
+                description: "Simba fue rescatado de un mercado donde vivía en condiciones precarias. Esterilizado, vacunado y con buena condición física. Curioso y muy activo, le encanta explorar y trepar, requiere un hogar que le brinde estímulos y juegos."
+            },
+            "Coco": {
+                img: "imagen/coco.png",
+                age: "3 años",
+                sex: "Macho",
+                size: "Mediano - Beagle",
+                description: "Coco fue encontrado perdido en un parque y llevado al refugio. Está vacunado, desparasitado y en buen estado general. Alegre y cariñoso, ideal para familias que disfruten de actividades al aire libre, muy sociable con personas y otros animales."
+            },
+            "Kira": {
+                img: "imagen/kira.png",
+                age: "4 años",
+                sex: "Hembra",
+                size: "Mediana - Doberman",
+                description: "Esta Doberman fue rescatada de una familia que no podía brindarle el espacio y la atención que necesitaba. Se encuentra vacunada, esterilizada y con controles veterinarios al día, su condición física es excelente gracias a su energía natural. Es protectora, inteligente y muy leal, disfruta de la compañía humana y responde bien al entrenamiento. Ideal para un hogar activo que valore su carácter vigilante y cariñoso."
+            }
+        };
+
+        const buttons = document.querySelectorAll(".card button");
+        const profileSection = document.getElementById("animal-profile");
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const name = btn.parentElement.querySelector("h3").textContent;
+                const data = animalData[name];
+
+                document.getElementById("profile-img").src = data.img;
+                document.getElementById("profile-name").textContent = name;
+                document.getElementById("profile-age").textContent = data.age;
+                document.getElementById("profile-sex").textContent = data.sex;
+                document.getElementById("profile-size").textContent = data.size;
+                document.getElementById("profile-description").textContent = data.description;
+
+                profileSection.classList.remove("hidden");
+                profileSection.scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
+
 
     <footer>
         <p>Patitas Empolvadas © 2026 | contacto@patitasempolvadas.org</p>
