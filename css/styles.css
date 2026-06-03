@@ -258,11 +258,12 @@ figcaption {
 }
 
 h2 {
-    color:  #6b3f2a;
+    color: #6b3f2a;
     margin-bottom: 20px;
     font-size: 2rem;
     text-align: center;
 }
+
 .conocenos {
     padding: 70px 20px;
     background: linear-gradient(135deg, #fef6e4, #f9f9f9);
@@ -562,6 +563,51 @@ h2 {
     border-color: #8ca17a;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .nav-links {
+        justify-content: center;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-info {
+        text-align: center;
+    }
+    
+    footer {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* Teléfonos Inteligentes */
+@media (max-width: 480px) {
+    .grid-galeria img {
+        height: 250px;
+        border-radius: 15px;
+    }
+    
+    .grid-container .card img {
+        height: 200px;
+    }
+    
+    .button, .carousel .hero-content .button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.8rem 1.2rem;
+    }
+}
 .redes {
     margin-top: 20px;
     display: flex;
