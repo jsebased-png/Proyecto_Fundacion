@@ -591,7 +591,6 @@ h2 {
     }
 }
 
-/* Teléfonos Inteligentes */
 @media (max-width: 480px) {
     .grid-galeria img {
         height: 250px;
