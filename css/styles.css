@@ -322,22 +322,22 @@ h2 {
 }
 
 .impactos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
+    margin-top: 20px;
 }
 
 .p-impacto {
-    flex: 1 1 200px;
     background: linear-gradient(135deg, #fef6e4, #f9f9f9);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
 }
 
 .p-impacto h3 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #8c5a3a;
     margin: 0;
 }
@@ -345,15 +345,20 @@ h2 {
 .p-impacto p {
     font-weight: bold;
     color: #8c593ae0;
-    margin: 20px 0;
+    margin: 15px 0;
+    font-size: 1em;
 }
 
 .grafica {
     margin-top: 20px;
+    margin: 30px auto;
+    padding: 0 20px;
+    max-width: 800px;
 }
 
 .grafica h3 {
     color: #8c5a3a;
+    font-size: 1.2em;
 }
 
 .ver {
@@ -362,7 +367,8 @@ h2 {
     overflow: hidden;
     height: 25px;
     margin: 10px 0;
-    font-size: 1.1em;
+    font-size: 1em;
+
 }
 
 .ver-fill {
@@ -372,6 +378,7 @@ h2 {
     font-size: 0.9em;
     line-height: 25px;
     padding-right: 10px;
+    transition: width 0.8s ease;
 }
 
 .rescatados {
@@ -394,17 +401,31 @@ h2 {
     text-align: center;
     margin-top: 30px;
     color: #444;
+    font-size: 1em;
+    padding: 0 10px;
 }
 
 @media (max-width: 900px) {
-    .stats-container {
-        grid-template-columns: repeat(2, 1fr);
+    .p-impacto h3 {
+        font-size: 1.8em;
     }
 }
 
 @media (max-width: 600px) {
-    .stats-container {
-        grid-template-columns: 1fr;
+    .p-impacto {
+        padding: 15px;
+    }
+
+    .p-impacto h3 {
+        font-size: 1.5em;
+    }
+
+    .p-impacto p {
+        font-size: 0.95em;
+    }
+
+    .grafica h3 {
+        font-size: 1em;
     }
 }
 
@@ -609,24 +630,19 @@ h2 {
 }
 
 .cta {
-    margin-top: 25px;
-    padding: 14px 24px;
-    background: #8ca17a;
+    display: block;
+    margin: 30px auto;
+    padding: 15px 25px;
+    background-color: #8ca17a;
     color: #fff;
     border: none;
     border-radius: 8px;
-    cursor: pointer;
     font-size: 1.1em;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    max-width: 300px;
+    text-align: center;
 }
 
-.cta:hover {
-    background: #8ca17ad0;
-    transform: translateY(-4px);
-}
 
 .contacto {
     padding: 50px 20px;
