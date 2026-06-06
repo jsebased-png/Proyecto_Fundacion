@@ -308,6 +308,106 @@ h2 {
     margin-top: 50px;
 }
 
+.estadisticas {
+    padding: 10px;
+    background: #ffffff;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.subtitulo {
+    font-weight: bold;
+    color: #393939e0;
+    margin: 10px 0;
+}
+
+.impactos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.p-impacto {
+    flex: 1 1 200px;
+    background: linear-gradient(135deg, #fef6e4, #f9f9f9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.p-impacto h3 {
+    font-size: 2.5em;
+    color: #8c5a3a;
+    margin: 0;
+}
+
+.p-impacto p {
+    font-weight: bold;
+    color: #8c593ae0;
+    margin: 20px 0;
+}
+
+.grafica {
+    margin-top: 20px;
+}
+
+.grafica h3 {
+    color: #8c5a3a;
+}
+
+.ver {
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 25px;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.ver-fill {
+    background-color: #8c5a3a;
+    text-align: right;
+    color: #fff;
+    font-size: 0.9em;
+    line-height: 25px;
+    padding-right: 10px;
+}
+
+.rescatados {
+    width: 90%;
+}
+
+.adoptados {
+    width: 80%;
+}
+
+.voluntarios {
+    width: 55%;
+}
+
+.eventos {
+    width: 60%;
+}
+
+.narrativa {
+    text-align: center;
+    margin-top: 30px;
+    color: #444;
+}
+
+@media (max-width: 900px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 .card {
     background: #fff;
     border-radius: 14px;
@@ -570,7 +670,7 @@ h2 {
         text-align: center;
         padding: 15px;
     }
-    
+
     .nav-links {
         justify-content: center;
     }
@@ -579,11 +679,11 @@ h2 {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .profile-info {
         text-align: center;
     }
-    
+
     footer {
         flex-direction: column;
         text-align: center;
@@ -596,17 +696,19 @@ h2 {
         height: 250px;
         border-radius: 15px;
     }
-    
+
     .grid-container .card img {
         height: 200px;
     }
-    
-    .button, .carousel .hero-content .button {
+
+    .button,
+    .carousel .hero-content .button {
         width: 100%;
         box-sizing: border-box;
         padding: 0.8rem 1.2rem;
     }
 }
+
 .redes {
     margin-top: 20px;
     display: flex;
